@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Aviation Flight Tracker</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="primary-bg">
+            <div class="header-content">
+                <img src="/images/ctca_logo.png" alt="CTCA Logo" class="company-logo">
+                <h1>International Aviation Flight Tracker</h1>
+            </div>
+        </header>
+
+        <main role="main">
+            <div class="tabs">
+                <button class="tab-button" data-aircraft="N590CL">N590CL</button>
+                <button class="tab-button" data-aircraft="N592CL">N592CL</button>
+                <button class="tab-button" data-aircraft="N562CL">N562CL</button>
+                <button class="tab-button" data-aircraft="manual">Manual Entry</button>
+            </div>
+
+            <div id="manualEntryContainer" style="display: none;">
+                <input type="text" id="manualAircraftInput" placeholder="Enter aircraft ID">
+                <button id="manualSearchButton">Search</button>
+            </div>
+
+            <div class="grid-container">
+                <div class="section search-section">
+                    <div id="loading" class="loading">Searching for aircraft...</div>
+                    <div id="status"></div>
+                    <div id="primaryResult" class="result-card"></div>
+                </div>
+
+                <div class="section map-section">
+                    <div id="map"></div>
+                    <div class="map-controls">
+                        <button id="zoomToRadius">250 Mile Radius</button>
+                        <button id="centerAircraft">Center Aircraft</button>
+                        <button id="showFullTrail">Show Full Trail</button>
+                        <button id="resetZoom">Reset Zoom</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="/js/app.js"></script>
+
+    <footer>
+        <p>This application is the property of International Aviation, LLC, Copyright 2024</p>
+    </footer>
+
+</body>
+</html>

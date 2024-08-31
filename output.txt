@@ -1,0 +1,42 @@
+Folder PATH listing for volume Extra_Drive1
+Volume serial number is 7C93-D181
+D:.
+|   .gitignore
+|   docker-compose.yml
+|   Dockerfile.backend
+|   Dockerfile.frontend
+|   file_structure.txt
+|   nginx.conf
+|   output.txt
+|   
++---backend
+|   |   .env
+|   |   requirements.txt
+|   |   
+|   \---app
+|       |   main.py
+|       |   
+|       +---static
+|       |   \---images
+|       \---templates
+|               index.html
+|               login.html
+|               
+\---frontend
+    |   site.webmanifest
+    |   
+    +---css
+    |       styles.css
+    |       
+    +---images
+    |       android-chrome-192x192.png
+    |       android-chrome-512x512.png
+    |       apple-touch-icon.png
+    |       ctca_logo.png
+    |       favicon-16x16.png
+    |       favicon-32x32.png
+    |       favicon.ico
+    |       
+    \---js
+            app.js
+            
